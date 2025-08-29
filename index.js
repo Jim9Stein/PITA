@@ -1,8 +1,8 @@
-// `http://www.omdbapi.com/?apikey=[d0e2373f]&`
-// `http://img.omdbapi.com/?apikey=[d0e2373f]&`
+// `http://www.omdbapi.com/?apikey=[ed16eeb8]&`
+// `http://img.omdbapi.com/?apikey=[ed16eeb8]&`
 
 
-// const moviesImg = fetch(`http://img.omdbapi.com/?apikey=d0e2373f&`)
+// const moviesImg = fetch(`http://img.omdbapi.com/?apikey=ed16eeb8&`)
 
 
 
