@@ -53,3 +53,15 @@ function filterMovies(filter) {
         renderMovies();
 }
 
+filterEl.addEventListener("change", (e) => {
+    filterMovies(e.targetvalue);
+});
+
+form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const searchTerm = searchInput.valuetrim();
+
+    
+})
+
