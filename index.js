@@ -54,13 +54,13 @@ function filterMovies(filter) {
 }
 
 filterEl.addEventListener("change", (e) => {
-    filterMovies(e.targetvalue);
+    filterMovies(e.target.value);
 });
 
 form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    const searchTerm = searchInput.valuetrim();
+    const searchTerm = searchInput.value.trim();
 
     
 })
