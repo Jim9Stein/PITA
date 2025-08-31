@@ -70,8 +70,22 @@ form.addEventListener('submit', async (event) => {
     resultsContainer.innerHTML = '<p>Loading...</p>';
 
     try {
-        const response = await fetch(`https://www.omdbapi.com/?apikey=${ed16eeb8}&s=${encodeURIComponent(searchTerm)}`);
+        const response = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${encodeURIComponent(searchTerm)}`);
         const data = await response.json();
-    }
 
-}
+        if (data.Response === 'True' && data.Search) {
+            resultsContainer.innerHTML = '';
+            movies = data.Search
+            renderMovies()
+
+        } else {
+            resultsContainer.innerHTML = `<p>No results found for "${searchTerm}".</p>`
+        }
+    }catch (error) {
+        console.error('Error fetching data:', error);
+        resultsContainer.innerHTML = `<p>An error occurred while fetching data. Please try again later.</p>`
+    }
+    });
+    filterMovies ()
+
+
