@@ -62,6 +62,16 @@ form.addEventListener('submit', async (event) => {
 
     const searchTerm = searchInput.value.trim();
 
-    
-})
+    if(!searchTerm) {
+        resultsContainer.innerHTML = '<p> Please enter search term.</p>';
+        return;
+    }
 
+    resultsContainer.innerHTML = '<p>Loading...</p>';
+
+    try {
+        const response = await fetch(`https://www.omdbapi.com/?apikey=${ed16eeb8}&s=${encodeURIComponent(searchTerm)}`);
+        const data = await response.json();
+    }
+
+}
